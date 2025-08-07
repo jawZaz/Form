@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Registrasi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulir Pendaftaran Siswa Baru</h1>
+  <p>Silakan isi formulir di bawah ini untuk mendaftar sebagai siswa baru.</p>
+  
+  <form action="proses.php" method="POST" enctype="multipart/form-data">
+    <label for="nama">Nama Lengkap:</label><br>
+    <input type="text" id="nama" name="nama" required><br><br>
+  
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="kelas">Pilih Kelas:</label><br>
+    
+    <select name="kelas" id="kelas" required>
+      <option value="">--Pilih Kelas--</option>
+      <option value="XI RPL 1">XI RPL 1</option>
+      <option value="XI RPL 2">XI RPL 2</option>
+      <option value="XI RPL 3">XI RPL 3</option>
+      <option value="XI TKJ 1">XI TKJ 1</option>
+      <option value="XI TKJ 2">XI TKJ 2</option>
+      <option value="XI TKJ 3">XI TKJ 3</option>
+      <option value="XI TKJ 4">XI TKJ 4</option>
+    </select><br><br>
+  
+    <label>Jenis Kelamin:</label><br>
+    <input type="radio" name="gender" value="Laki-laki" required> Laki-laki
+    <input type="radio" name="gender" value="Perempuan"> Perempuan<br><br>
+  
+    <label for="Ekstrakulikuler"required>Extrakulikuler</label><br>
+    <input type="checkbox" name="Ekstrakulikuler[]" value="Bulu Tangkis"> Bulu Tangkis
+    <input type="checkbox" name="Ekstrakulikuler[]" value="Basket"> Basket
+    <input type="checkbox" name="Ekstrakulikuler[]" value="Futsal"> Futsal
+    <input type="checkbox" name="Ekstrakulikuler[]" value="Volly"> Volly <br><br>
+  
+    <label for="foto">Upload Foto:</label><br>
+    <input type="file" name="foto" accept="image/*"required><br><br>
+  
+    <label for="Deksripsi Minat dan Bakat">Deskripsi Minat dan Bakat:</label><br>
+    <textarea name="Deskripsi Minat dan Bakat" id="Minat dan Bakat" rows="2" cols="40" required></textarea><br><br>
+  
+    <input type="submit" value="Kirim">
+  </form>
+
+</body>
+</html>
